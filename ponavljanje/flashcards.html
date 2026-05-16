@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="sl"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><title>Flash-cards</title><link href="../assets/css/styles.css" rel="stylesheet"/></head><body><header class="site-header">
+<div class="brand"><a href="../index.html">Geografija Evrope</a><span>interaktivna priprava</span></div>
+<button aria-label="Odpri meni" class="burger">☰</button>
+<nav class="top-nav">
+<a class="" href="../ucenje/evropa.html">Učenje</a>
+<a class="" href="../definicije.html">Definicije</a>
+<a class="" href="../karte.html">Karte</a>
+<div class="nav-dd"><a class="active" href="../ponavljanje/top-vprasanja.html">Ponavljanje</a><div class="dd-menu"><a href="../ponavljanje/top-vprasanja.html">Top vprašanja</a><a href="../ponavljanje/flashcards.html">Flash-cards</a></div></div>
+<a class="" href="../testi.html">Testi</a>
+</nav>
+</header><main class="layout no-side"><section class="content"><section class="hero"><div><p class="kicker">Ponavljanje</p><h1>Flash-cards</h1><p>Na zaslonu je 6 kartic. Izberi del Evrope in širšo temo ali pusti vse skupaj. Označene kartice lahko zamenjaš z novimi.</p></div></section><div class="flash-controls"><label>Del Evrope<select id="regionFilter"><option value="all">Vse skupaj</option><option>Evropa splošno</option><option>Južna Evropa</option><option>Severna Evropa</option><option>Zahodna Evropa</option></select></label><label>Večja tema<select id="themeFilter"><option value="all">Vse teme</option><option>Naravnogeografske značilnosti</option><option>Družbenogeografske značilnosti</option><option>Gospodarstvo in razvoj</option><option>Okoljski problemi in procesi</option><option>Države, regije in primerjave</option><option>Karte, grafi in klimogrami</option></select></label><button class="btn" id="shuffleCards">Premešaj / zamenjaj vseh 6</button><button class="btn secondary" id="replaceSelected">Zamenjaj izbrane kartice</button><button class="btn ghost" id="showAnswers">Pokaži/skrij odgovore</button></div><div class="flash-grid" id="flashcards"></div></section></main><script src="../assets/js/main.js"></script><script>window.FLASHCARDS_URL="../assets/data/flashcards.json";</script><script src="../assets/js/flashcards.js"></script></body></html>
