@@ -1,0 +1,529 @@
+
+const EMBEDDED_FLASHCARDS = [
+  {
+    "q": "Kaj je migracijski saldo?",
+    "a": "Razlika med številom priseljenih in odseljenih na določenem območju v koledarskem letu. Pozitiven pomeni priseljevanje, negativen odseljevanje.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#migracije"
+  },
+  {
+    "q": "Zakaj vsi migranti niso begunci?",
+    "a": "Migrant je vsak selivec ne glede na vzrok. Begunec je prisilni migrant, ki zapusti državo zaradi vojne, preganjanja ali nevarnosti.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#migracije"
+  },
+  {
+    "q": "Naštej štiri glavne vzroke za selitve.",
+    "a": "Gospodarski, politični/verski, osebni in okoljski vzroki.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#migracije"
+  },
+  {
+    "q": "Kdaj je EU dobila izrazito pozitiven migracijski saldo?",
+    "a": "Od sredine 80. let 20. stoletja so selitveni tokovi postali bolj množični in migracijski saldo EU je postal pozitiven.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#migracije"
+  },
+  {
+    "q": "Kaj pomeni modra banana?",
+    "a": "Najpomembnejše osrednje območje Evrope od JV Anglije prek Beneluksa, zahodne Nemčije in Švice do severne Italije.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#regionalne-razlike"
+  },
+  {
+    "q": "Kaj je sončni pas?",
+    "a": "Širši sredozemski razvojni pas od SV Španije prek francoske sredozemske obale do severne Italije.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#regionalne-razlike"
+  },
+  {
+    "q": "Kje je evropska populacijska os?",
+    "a": "Ob približno 50. vzporedniku od Anglije do Ukrajine: Black Country - Porurje - Šlezija - Doneški bazen.",
+    "region": "Evropa splošno",
+    "theme": "Karte, grafi in klimogrami",
+    "link": "../ucenje/evropa.html#prebivalstvo"
+  },
+  {
+    "q": "Zakaj se prebivalstvo Evrope stara?",
+    "a": "Zaradi nizke rodnosti, daljše življenjske dobe, mestnega načina življenja in posledic zgodovinskih izgub.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#prebivalstvo"
+  },
+  {
+    "q": "Kateri dejavniki vplivajo na kmetijstvo v Evropi?",
+    "a": "Podnebje, relief, prst in vodni viri.",
+    "region": "Evropa splošno",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/evropa.html#kmetijstvo"
+  },
+  {
+    "q": "Kje so najboljše naravne možnosti za kmetijstvo v Evropi?",
+    "a": "V nižjem svetu z oceanskim in kontinentalnim vlažnim podnebjem: Zahodna, Srednja in delno Vzhodna Evropa.",
+    "region": "Evropa splošno",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/evropa.html#kmetijstvo"
+  },
+  {
+    "q": "Kaj je primarna energija?",
+    "a": "Energija iz naravnih virov pred pretvorbo ali predelavo, npr. premog, nafta, zemeljski plin, voda, veter.",
+    "region": "Evropa splošno",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/evropa.html#energetika"
+  },
+  {
+    "q": "Kaj je končna energija?",
+    "a": "Energija, ki je uporabna za potrošnika, npr. električna energija, toplota ali gorivo.",
+    "region": "Evropa splošno",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/evropa.html#energetika"
+  },
+  {
+    "q": "Zakaj je energetska odvisnost EU problem?",
+    "a": "Ker mora EU večji del energije uvoziti, zato je občutljiva na politične krize, cene in prekinjene dobavne poti.",
+    "region": "Evropa splošno",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/evropa.html#energetika"
+  },
+  {
+    "q": "Kaj je TEN-T?",
+    "a": "Trans-European Transport Network: vseevropsko prometno omrežje cest, železnic, pristanišč, letališč in vodnih poti.",
+    "region": "Evropa splošno",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/evropa.html#promet"
+  },
+  {
+    "q": "Katera plovna pot povezuje Severno in Črno morje?",
+    "a": "Plovna pot Ren-Majna-Donava.",
+    "region": "Evropa splošno",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/evropa.html#promet"
+  },
+  {
+    "q": "Zakaj je Sredozemlje najpomembnejše turistično območje?",
+    "a": "Zaradi toplega podnebja, obal, prometne dostopnosti, infrastrukture in množičnega poletnega turizma.",
+    "region": "Evropa splošno",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/evropa.html#turizem"
+  },
+  {
+    "q": "Kaj je EU?",
+    "a": "Politično-ekonomska zveza 27 evropskih držav.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#eu"
+  },
+  {
+    "q": "Kdaj je bila ustanovljena Evropska skupnost za premog in jeklo?",
+    "a": "Leta 1951; ustanovne članice so Belgija, Nizozemska, Luksemburg, Zahodna Nemčija, Francija in Italija.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#eu"
+  },
+  {
+    "q": "Kaj je uvedla Maastrichtska pogodba?",
+    "a": "Leta 1992 je pravno vzpostavila Evropsko unijo in razširila sodelovanje na nova področja.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#eu"
+  },
+  {
+    "q": "Katera je bila največja širitev EU?",
+    "a": "Leta 2004, ko se je pridružilo 10 držav, med njimi Slovenija, Poljska, Češka, Madžarska in pribaltske države.",
+    "region": "Evropa splošno",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/evropa.html#eu"
+  },
+  {
+    "q": "Kaj je Baltski ščit?",
+    "a": "Stara uravnava iz predkambrija na območju Švedske in Finske.",
+    "region": "Severna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#povrsje"
+  },
+  {
+    "q": "Zakaj je Islandija vulkansko aktivna?",
+    "a": "Leži na stiku Severnoameriške in Evrazijske litosferske plošče ter nad vročo točko.",
+    "region": "Severna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#povrsje"
+  },
+  {
+    "q": "Kaj je fjord?",
+    "a": "Koritasto preoblikovana ledeniška dolina, ki jo je po umiku ledu zalilo morje.",
+    "region": "Severna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#poledenitev"
+  },
+  {
+    "q": "Kako nastane fjord?",
+    "a": "Ledeniška erozija poglobi dolino pod morsko gladino, po otoplitvi in dvigu morja pa dolino zalije morska voda.",
+    "region": "Severna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#poledenitev"
+  },
+  {
+    "q": "Kaj je Finska po geografski posebnosti?",
+    "a": "Dežela tisočerih jezer; številna ledeniška jezera tvorijo pojezerja.",
+    "region": "Severna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#poledenitev"
+  },
+  {
+    "q": "Kateri dejavniki vplivajo na podnebje Severne Evrope?",
+    "a": "Visoka geografska širina, topli Severnoatlantski tok, Skandinavsko gorovje in oddaljenost od morja.",
+    "region": "Severna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#podnebje"
+  },
+  {
+    "q": "Zakaj je obala Norveške poseljena kljub severni legi?",
+    "a": "Topli Severnoatlantski tok omili podnebje in omogoča poselitev obalnega pasu.",
+    "region": "Severna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#poselitev"
+  },
+  {
+    "q": "Kaj je nordijski model razvoja?",
+    "a": "Model z visoko razvitostjo, demokracijo, zaupanjem v institucije, nizko korupcijo, visokimi davki in socialno državo.",
+    "region": "Severna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#nordijski-model"
+  },
+  {
+    "q": "Katera država Severne Evrope je pomembna izvoznica nafte in plina?",
+    "a": "Norveška; glavne zaloge so v Severnem morju, del tudi v Norveškem in Barentsovem morju.",
+    "region": "Severna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/severna-evropa.html#energetika"
+  },
+  {
+    "q": "Zakaj ima Norveška veliko hidroenergije?",
+    "a": "Zaradi goratega površja, velikega strmca rek in obilnih padavin/ledenikov.",
+    "region": "Severna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/severna-evropa.html#energetika"
+  },
+  {
+    "q": "Kaj je Rail Baltica?",
+    "a": "Projekt hitre železniške povezave, ki naj bi povezal pribaltske države s Poljsko in evropskim železniškim omrežjem.",
+    "region": "Severna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/severna-evropa.html#promet"
+  },
+  {
+    "q": "Zakaj je v Severni Evropi problem kislega dežja?",
+    "a": "Zaradi žveplovih in dušikovih spojin iz drugih delov Evrope ter silikatne kamninske podlage, ki slabo nevtralizira kisline.",
+    "region": "Severna Evropa",
+    "theme": "Okoljski problemi in procesi",
+    "link": "../ucenje/severna-evropa.html#kisli-dez"
+  },
+  {
+    "q": "Kateri državi Severne Evrope sta pomembni v ribištvu?",
+    "a": "Norveška in Islandija; pomemben je ulov, izvoz rib in na Norveškem tudi ribogojstvo.",
+    "region": "Severna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/severna-evropa.html#ribistvo"
+  },
+  {
+    "q": "Zakaj je Finska pomembna v gozdarstvu?",
+    "a": "Je najbolj gozdnata država Evrope, gozdovi pokrivajo približno tri četrtine površja.",
+    "region": "Severna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/severna-evropa.html#gozdarstvo"
+  },
+  {
+    "q": "Kaj je rusifikacija v pribaltskih državah?",
+    "a": "Načrtno priseljevanje rusko govorečih delavcev in širjenje ruskega vpliva v času Sovjetske zveze.",
+    "region": "Severna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#pribaltske"
+  },
+  {
+    "q": "Zakaj imajo pribaltske države demografsko krizo?",
+    "a": "Zaradi izseljevanja po osamosvojitvi, prehoda v tržno gospodarstvo, vstopa v EU, finančne krize in nizkega naravnega prirasta.",
+    "region": "Severna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/severna-evropa.html#pribaltske"
+  },
+  {
+    "q": "Kaj je razlika med Sredozemljem in Južno Evropo?",
+    "a": "Sredozemlje zajema obale Sredozemskega morja v Evropi, Aziji in Afriki; Južna Evropa je večji del evropskega Sredozemlja.",
+    "region": "Južna Evropa",
+    "theme": "Države, regije in primerjave",
+    "link": "../ucenje/juzna-evropa.html#okvir"
+  },
+  {
+    "q": "Naštej polotoke Južne Evrope.",
+    "a": "Pirenejski/Iberski polotok, Apeninski polotok in najjužnejši del Balkanskega polotoka.",
+    "region": "Južna Evropa",
+    "theme": "Karte, grafi in klimogrami",
+    "link": "../ucenje/juzna-evropa.html#okvir"
+  },
+  {
+    "q": "Zakaj so v Južni Evropi potresi in vulkani?",
+    "a": "Zaradi stika Afriške in Evrazijske litosferske plošče ter alpidske orogeneze.",
+    "region": "Južna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/juzna-evropa.html#tektonika"
+  },
+  {
+    "q": "Naštej aktivne vulkane Južne Evrope iz snovi.",
+    "a": "Etna, Stromboli, Vezuv in Santorin.",
+    "region": "Južna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/juzna-evropa.html#tektonika"
+  },
+  {
+    "q": "Kaj je značilno za sredozemsko podnebje?",
+    "a": "Vroča in suha poletja, mile zime ter višek padavin v hladni polovici leta.",
+    "region": "Južna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/juzna-evropa.html#podnebje"
+  },
+  {
+    "q": "Kako se sredozemsko rastlinstvo prilagaja suši?",
+    "a": "Z debelimi, trdimi, povoščenimi listi ali iglicami, globokimi koreninami in trnjem.",
+    "region": "Južna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/juzna-evropa.html#rastlinstvo"
+  },
+  {
+    "q": "Kakšno je zaporedje degradacije sredozemskega rastlinstva?",
+    "a": "Sredozemski gozd -> makija -> gariga -> gola kamnita tla.",
+    "region": "Južna Evropa",
+    "theme": "Okoljski problemi in procesi",
+    "link": "../ucenje/juzna-evropa.html#rastlinstvo"
+  },
+  {
+    "q": "Zakaj je Sredozemsko morje zelo onesnaženo?",
+    "a": "Zaradi zaprtosti morja, goste obalne poselitve, turizma, industrije, ladijskega prometa, kmetijstva in počasne izmenjave vode.",
+    "region": "Južna Evropa",
+    "theme": "Okoljski problemi in procesi",
+    "link": "../ucenje/juzna-evropa.html#sredozemlje"
+  },
+  {
+    "q": "Zakaj je Sueški prekop pomemben?",
+    "a": "Povezuje Sredozemsko in Rdeče morje ter skrajša pomorsko pot med Evropo in Azijo.",
+    "region": "Južna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/juzna-evropa.html#sredozemlje"
+  },
+  {
+    "q": "Na kaj je prilagojeno sredozemsko kmetijstvo?",
+    "a": "Na sredozemsko podnebje s poletno sušo in hribovito površje.",
+    "region": "Južna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/juzna-evropa.html#kmetijstvo"
+  },
+  {
+    "q": "Katere so tradicionalne oblike sredozemskega kmetijstva?",
+    "a": "Sušno poljedelstvo z ozimnimi žiti, sušno kmetijstvo s trajnimi kulturami, namakalno kmetijstvo in živinoreja drobnice.",
+    "region": "Južna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/juzna-evropa.html#kmetijstvo"
+  },
+  {
+    "q": "Kaj je litoralizacija na Iberskem polotoku?",
+    "a": "Zgoščanje prebivalstva in gospodarstva na obalah, medtem ko se notranjost prazni.",
+    "region": "Južna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/juzna-evropa.html#procesi"
+  },
+  {
+    "q": "Kateri jeziki so pomembni pri etničnih manjšinah v Španiji?",
+    "a": "Kastiljščina, katalonščina, galicijščina in baskovščina.",
+    "region": "Južna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/juzna-evropa.html#procesi"
+  },
+  {
+    "q": "Kaj je Mezzogiorno?",
+    "a": "Revnejši jug Italije južno od Rima, skupaj s Sicilijo in Sardinijo.",
+    "region": "Južna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/juzna-evropa.html#procesi"
+  },
+  {
+    "q": "Zakaj je sever Italije razvitejši od juga?",
+    "a": "Zaradi boljše infrastrukture, produktivnega kmetijstva, industrije, storitev, zgodovinskega razvoja in dinamičnih podjetij.",
+    "region": "Južna Evropa",
+    "theme": "Države, regije in primerjave",
+    "link": "../ucenje/juzna-evropa.html#procesi"
+  },
+  {
+    "q": "Kaj se je zgodilo v Grčiji po finančni krizi 2008?",
+    "a": "Grčija je potrebovala finančno pomoč, uvedla reforme in varčevanje; kriza se je formalno končala leta 2018.",
+    "region": "Južna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/juzna-evropa.html#procesi"
+  },
+  {
+    "q": "Kako je razdeljen Ciper?",
+    "a": "Na grški del, Republiko Ciper, ki je od 2004 v EU, in turški del, ki ga priznava le Turčija.",
+    "region": "Južna Evropa",
+    "theme": "Države, regije in primerjave",
+    "link": "../ucenje/juzna-evropa.html#procesi"
+  },
+  {
+    "q": "Kaj je Zahodna Evropa v geografskem smislu?",
+    "a": "Geografska enota sedmih visoko razvitih držav ob Atlantskem oceanu z večinoma oceanskim podnebjem.",
+    "region": "Zahodna Evropa",
+    "theme": "Države, regije in primerjave",
+    "link": "../ucenje/zahodna-evropa.html#okvir"
+  },
+  {
+    "q": "Katere države spadajo v Zahodno Evropo po snovi?",
+    "a": "Irska, Velika Britanija, Belgija, Nizozemska, Luksemburg, Francija in Monako.",
+    "region": "Zahodna Evropa",
+    "theme": "Države, regije in primerjave",
+    "link": "../ucenje/zahodna-evropa.html#okvir"
+  },
+  {
+    "q": "Katere reke Zahodne Evrope moraš poznati?",
+    "a": "Temza, Ren, Loara, Sena in Rona.",
+    "region": "Zahodna Evropa",
+    "theme": "Karte, grafi in klimogrami",
+    "link": "../ucenje/zahodna-evropa.html#okvir"
+  },
+  {
+    "q": "Kaj je oceansko podnebje Zahodne Evrope?",
+    "a": "Podnebje s svežimi poletji, milimi zimami, majhnimi temperaturnimi amplitudami in padavinami vse leto.",
+    "region": "Zahodna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/zahodna-evropa.html#podnebje"
+  },
+  {
+    "q": "Zakaj je Zahodna Evropa zelena Evropa?",
+    "a": "Zaradi oceanskega podnebja, veliko vlage in travniškega/listnatega rastlinstva.",
+    "region": "Zahodna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/zahodna-evropa.html#podnebje"
+  },
+  {
+    "q": "Kaj je kmetijska revolucija v Veliki Britaniji povzročila?",
+    "a": "Povečala je pridelavo, modernizirala kmetijstvo in sprostila delovno silo za industrijo.",
+    "region": "Zahodna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/zahodna-evropa.html#razvoj"
+  },
+  {
+    "q": "Kje se je začela industrijska revolucija?",
+    "a": "V Angliji v 18. stoletju.",
+    "region": "Zahodna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/zahodna-evropa.html#razvoj"
+  },
+  {
+    "q": "Kateri dejavniki so omogočili industrializacijo Zahodne Evrope?",
+    "a": "Kmetijska in industrijska revolucija, premog in železova ruda, pristanišča, železnice ter kolonializem.",
+    "region": "Zahodna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/zahodna-evropa.html#razvoj"
+  },
+  {
+    "q": "Kaj je kolonializem pomenil za Zahodno Evropo?",
+    "a": "Kolonije so bile vir surovin in tržišča za izdelke, posledice pa so vidne v migracijah in multikulturnosti.",
+    "region": "Zahodna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/zahodna-evropa.html#razvoj"
+  },
+  {
+    "q": "Kaj je deindustrializacija?",
+    "a": "Nadomeščanje industrije s storitvami in zmanjševanje deleža zaposlenih v industriji.",
+    "region": "Zahodna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/zahodna-evropa.html#uk"
+  },
+  {
+    "q": "Kaj je Britansko otočje?",
+    "a": "Dva velika otoka, Velika Britanija in Irska, ter številni manjši otoki.",
+    "region": "Zahodna Evropa",
+    "theme": "Države, regije in primerjave",
+    "link": "../ucenje/zahodna-evropa.html#uk"
+  },
+  {
+    "q": "Kaj je Združeno kraljestvo?",
+    "a": "Država, ki jo sestavljajo Anglija, Wales, Škotska in Severna Irska.",
+    "region": "Zahodna Evropa",
+    "theme": "Države, regije in primerjave",
+    "link": "../ucenje/zahodna-evropa.html#uk"
+  },
+  {
+    "q": "Kaj so zeleni pasovi v Veliki Britaniji?",
+    "a": "Nezazidljiva zemljišča okoli mest, namenjena omejevanju širjenja mest in preprečevanju spajanja naselij.",
+    "region": "Zahodna Evropa",
+    "theme": "Okoljski problemi in procesi",
+    "link": "../ucenje/zahodna-evropa.html#uk"
+  },
+  {
+    "q": "Kaj je keltski tiger?",
+    "a": "Obdobje hitre gospodarske rasti Irske med letoma 1995 in 2007.",
+    "region": "Zahodna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/zahodna-evropa.html#uk"
+  },
+  {
+    "q": "Kaj je Beneluks?",
+    "a": "Politično-gospodarska unija Belgije, Nizozemske in Luksemburga.",
+    "region": "Zahodna Evropa",
+    "theme": "Države, regije in primerjave",
+    "link": "../ucenje/zahodna-evropa.html#beneluks"
+  },
+  {
+    "q": "Zakaj je Nizozemska zelo gosto poseljena?",
+    "a": "Ima veliko ravnin, ugodno lego, močno gospodarstvo, prometno povezavo in visoko urbanizacijo.",
+    "region": "Zahodna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/zahodna-evropa.html#beneluks"
+  },
+  {
+    "q": "Kaj so polderji?",
+    "a": "Izsušena zemljišča na območju nekdanjega morja ali jezera, zavarovana z nasipi in sistemi črpanja vode.",
+    "region": "Zahodna Evropa",
+    "theme": "Naravnogeografske značilnosti",
+    "link": "../ucenje/zahodna-evropa.html#beneluks"
+  },
+  {
+    "q": "Zakaj je Nizozemska poplavno ogrožena?",
+    "a": "Leži v delti Rena, Maasa in Šelde; del površja je pod morsko gladino, nevarni so plima, viharni valovi in dvig morja.",
+    "region": "Zahodna Evropa",
+    "theme": "Okoljski problemi in procesi",
+    "link": "../ucenje/zahodna-evropa.html#beneluks"
+  },
+  {
+    "q": "Kaj je projekt Delta?",
+    "a": "Sistem protipoplavnih nasipov in zapornic na zunanjih ustjih in estuarijih rek na Nizozemskem.",
+    "region": "Zahodna Evropa",
+    "theme": "Okoljski problemi in procesi",
+    "link": "../ucenje/zahodna-evropa.html#beneluks"
+  },
+  {
+    "q": "Zakaj je Rotterdam pomemben?",
+    "a": "Je največje evropsko pristanišče po obsegu pretovora in leži ob estuariju reke Novi Maas.",
+    "region": "Zahodna Evropa",
+    "theme": "Gospodarstvo in razvoj",
+    "link": "../ucenje/zahodna-evropa.html#beneluks"
+  },
+  {
+    "q": "Kaj je Randstad Holland?",
+    "a": "Konurbacija Rotterdam-Haag-Amsterdam-Utrecht z zelenim srcem v notranjosti.",
+    "region": "Zahodna Evropa",
+    "theme": "Družbenogeografske značilnosti",
+    "link": "../ucenje/zahodna-evropa.html#beneluks"
+  }
+];
+let allCards=[], pool=[], visible=[];
+async function loadCards(){try{if(location.protocol!=="file:"){const res=await fetch(window.FLASHCARDS_URL); allCards=await res.json();}else{allCards=EMBEDDED_FLASHCARDS;}}catch(e){allCards=EMBEDDED_FLASHCARDS;} renderNew();}
+function currentPool(){const r=document.getElementById('regionFilter').value; const t=document.getElementById('themeFilter').value; return allCards.filter(c=>(r==='all'||c.region===r)&&(t==='all'||c.theme===t));}
+function pick(pool,n,exclude=[]){const ex=new Set(exclude); const arr=pool.filter((_,i)=>!ex.has(i)).map((c,i)=>({c,i:pool.indexOf(c)})); for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]];} return arr.slice(0,n).map(x=>x.c);}
+function renderNew(){pool=currentPool(); visible=pick(pool,6); render();}
+function render(){const wrap=document.getElementById('flashcards'); if(!pool.length){wrap.innerHTML='<div class="learn-section">Ni kartic za ta filter.</div>'; return;} wrap.innerHTML=visible.map((c,i)=>`<div class="flash-card" data-i="${i}"><input class="flash-check" type="checkbox" title="Izberi za zamenjavo"><div class="flash-inner"><div class="flash-face flash-front"><div><div class="flash-meta">${c.region} · ${c.theme}</div><h3>${c.q}</h3></div><button class="btn ghost flip">Pokaži odgovor</button></div><div class="flash-face flash-back"><div><div class="flash-meta">Odgovor</div><p>${c.a}</p><a href="${c.link}">Preberi več</a></div><button class="btn ghost flip">Nazaj</button></div></div></div>`).join(''); wrap.querySelectorAll('.flip').forEach(b=>b.addEventListener('click',e=>e.target.closest('.flash-card').classList.toggle('flipped')));}
+function replaceSelected(){let used=new Set(visible); document.querySelectorAll('.flash-card').forEach(card=>{const i=+card.dataset.i; if(card.querySelector('.flash-check').checked){let candidates=pool.filter(c=>!visible.includes(c)); if(!candidates.length) candidates=pool; visible[i]=candidates[Math.floor(Math.random()*candidates.length)];}}); render();}
+document.getElementById('shuffleCards')?.addEventListener('click',renderNew);document.getElementById('replaceSelected')?.addEventListener('click',replaceSelected);document.getElementById('regionFilter')?.addEventListener('change',renderNew);document.getElementById('themeFilter')?.addEventListener('change',renderNew);document.getElementById('showAnswers')?.addEventListener('click',()=>document.querySelectorAll('.flash-card').forEach(c=>c.classList.toggle('flipped')));loadCards();

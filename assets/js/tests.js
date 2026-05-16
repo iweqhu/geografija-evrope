@@ -1,0 +1,354 @@
+
+const EMBEDDED_TESTS = {
+  "A": {
+    "title": "Test A",
+    "questions": [
+      {
+        "type": "short",
+        "pts": 2,
+        "q": "Zapiši definicijo migracijskega salda in navedi, kaj pomeni pozitiven migracijski saldo.",
+        "answer": "Migracijski saldo je razlika med številom priseljenih in odseljenih na določenem območju v koledarskem letu. Pozitiven migracijski saldo pomeni, da se je na območje priselilo več ljudi, kot se jih je odselilo, zato migracije povečujejo število prebivalcev."
+      },
+      {
+        "type": "table",
+        "pts": 4,
+        "q": "Primerjaj osrednja in robna območja Evrope. Navedi po dve značilnosti vsakega.",
+        "answer": "Osrednja območja imajo zgoščeno gospodarsko moč, gosto poselitev, dobro prometno omrežje, več delovnih mest in pogosto pozitiven migracijski saldo. Robna ali periferna območja zaostajajo v gospodarskem in demografskem razvoju, imajo manj delovnih mest, slabšo prometno povezanost in pogostejše odseljevanje. Razlika nastane, ker se kapital, promet in storitve koncentrirajo v najmočnejših mestih in razvojnih oseh."
+      },
+      {
+        "type": "classify",
+        "pts": 4,
+        "q": "Razvrsti pojme: fjord, modra banana, makija, migracijski saldo, polder, TEN-T, Mezzogiorno, gejzir.",
+        "answer": "Naravnogeografski pojmi: fjord, makija, polder, gejzir. Družbenogeografski pojmi: modra banana, migracijski saldo, TEN-T, Mezzogiorno. Pri razvrščanju pazi, ali pojem opisuje naravo in površje ali pa prebivalstvo, gospodarstvo, promet in regionalni razvoj."
+      },
+      {
+        "type": "explain",
+        "pts": 4,
+        "q": "Pojasni, zakaj ima Zahodna Evropa oceansko podnebje.",
+        "answer": "Zahodna Evropa ima oceansko podnebje zaradi lege ob Atlantskem oceanu, vpliva toplega Severnoatlantskega toka in stalnih zahodnih vetrov. Ti prinašajo vlažen in razmeroma topel zrak, zato so zime mile, poletja sveža, padavine so razporejene skozi vse leto, letne temperaturne razlike pa so manjše kot v notranjosti Evrope."
+      },
+      {
+        "type": "map",
+        "pts": 6,
+        "q": "Na nemi karti Južne Evrope poimenuj: Pirenejski polotok, Apeninski polotok, Padsko nižino, Sicilijo, Kreto in Jadransko morje.",
+        "answer": "Na nemi karti mora biti pravilno označenih vseh šest pojmov: Pirenejski polotok na jugozahodu Evrope, Apeninski polotok v Italiji, Padska nižina v severni Italiji, Sicilija južno od Apeninskega polotoka, Kreta južno od Grčije in Jadransko morje med Apeninskim in Balkanskim polotokom.",
+        "img": "assets/images/juzna_evropa_nema.png",
+        "solutionImg": "assets/images/juzna_evropa_karta.png"
+      },
+      {
+        "type": "truefalse",
+        "pts": 5,
+        "q": "Označi DA/NE: a) Sredozemlje je isto kot Južna Evropa. b) Etna je aktiven vulkan. c) Nizozemska je najgosteje poseljena evropska država v gradivu. d) Rail Baltica povezuje pribaltske države s Poljsko. e) EU in evroobmočje sta ista pojma.",
+        "answer": "a) NE - Sredozemlje ni isto kot Južna Evropa, ker vključuje tudi dele Azije in Afrike. b) DA - Etna je aktiven vulkan. c) DA - v gradivu je Nizozemska navedena kot najgosteje poseljena evropska država. d) DA - Rail Baltica povezuje pribaltske države s Poljsko in evropskim omrežjem. e) NE - EU in evroobmočje nista ista pojma."
+      },
+      {
+        "type": "fill",
+        "pts": 5,
+        "q": "Dopolni: Sredozemsko podnebje ima ______ poletja, ______ zime in višek padavin v ______ polovici leta.",
+        "answer": "Sredozemsko podnebje ima vroča in suha poletja, mile in bolj vlažne zime ter višek padavin v hladni polovici leta. Poletna suša je ključna za razumevanje sredozemskega rastlinstva, kmetijstva in nevarnosti požarov."
+      },
+      {
+        "type": "graph",
+        "pts": 4,
+        "q": "Preberi klimogram sredozemskega podnebja: opiši temperaturne in padavinske značilnosti.",
+        "answer": "Klimogram prikazuje sredozemsko podnebje: poleti so temperature visoke, padavin pa je malo, zato nastopi poletna suša. Pozimi so temperature milejše, padavin je več, pogosto z viškom v jesensko-zimski polovici leta. Tak ritem vpliva na rastlinstvo in kmetijstvo: rastline morajo preživeti sušo, poljščine pa pogosto dozorijo pred poletjem ali potrebujejo namakanje.",
+        "img": "assets/images/juzna_klimogram_sredozemsko.png",
+        "solutionImg": "assets/images/juzna_klimogram_sredozemsko.png"
+      },
+      {
+        "type": "explain",
+        "pts": 6,
+        "q": "Pojasni nastanek fjorda in navedi dve posledici fjordskega tipa obale.",
+        "answer": "Fjord nastane, ko ledenik z erozijo poglobi rečno dolino v koritasto dolino, po umiku ledu pa jo zalije morje. Posledice so zelo razčlenjena obala, otežen cestni promet, potreba po trajektih in mostovih, razvoj turizma ter poselitev ob obalah in v zalivih."
+      },
+      {
+        "type": "short",
+        "pts": 5,
+        "q": "Kaj je modra banana? Navedi tri značilnosti.",
+        "answer": "Modra banana je glavno osrednje razvojno območje Evrope, ki poteka približno od jugovzhodne Anglije prek Beneluksa, zahodne Nemčije in Švice do severne Italije. Značilni so gosta poselitev, velika gospodarska moč, močna urbanizacija, dobro prometno omrežje, storitvene dejavnosti in velika mesta. Pomembna je, ker razlaga regionalne razlike med osredjem in periferijo Evrope."
+      },
+      {
+        "type": "explain",
+        "pts": 6,
+        "q": "Razloži, zakaj je Sredozemsko morje onesnaženo.",
+        "answer": "Sredozemsko morje je onesnaženo, ker je skoraj zaprto morje s počasno izmenjavo vode z Atlantikom. Ob obalah so gosta poselitev, množični turizem, industrija, pristanišča, ladijski promet in intenzivno kmetijstvo. Zato v morje prihajajo odpadne vode, plastika, mikroplastika, naftni madeži in hranila iz kmetijstva, ki se zaradi počasne izmenjave vode zadržujejo dlje časa."
+      },
+      {
+        "type": "defs",
+        "pts": 5,
+        "q": "Razloži pojme: azil, polder, deindustrializacija, država blaginje, litoralizacija.",
+        "answer": "Azil je mednarodna zaščita za begunce. Polder je izsušeno zemljišče, zavarovano z nasipi in črpanjem vode. Deindustrializacija je zmanjševanje pomena industrije in nadomeščanje s storitvami. Država blaginje zagotavlja visoko socialno in materialno varnost. Litoralizacija je zgoščanje prebivalstva in gospodarstva ob obalah."
+      }
+    ]
+  },
+  "B": {
+    "title": "Test B",
+    "questions": [
+      {
+        "type": "short",
+        "pts": 2,
+        "q": "Navedi štiri dejavnike, ki vplivajo na razporeditev prebivalstva Evrope.",
+        "answer": "Na razporeditev prebivalstva Evrope vplivajo lega v zmerno toplem pasu, vpliv Atlantskega oceana, zgodovinski razvoj, relief in vodovje. Poselitev je gostejša tam, kjer so ugodnejše naravne razmere, nižine, prometne poti, gospodarska središča in zgodnejša industrializacija."
+      },
+      {
+        "type": "compare",
+        "pts": 5,
+        "q": "Primerjaj Severni in Južni del Evrope po reliefu, podnebju in rastlinstvu.",
+        "answer": "Severna Evropa ima stare geološke enote, močan vpliv poledenitve, fjorde, fjelle in veliko jezer; podnebje je hladnejše, rastlinstvo pa vključuje iglasti gozd, tundro in gorsko rastlinstvo. Južna Evropa ima mladonagubana gorstva, potresno in vulkansko dejavnost, sredozemsko podnebje z vročimi suhimi poletji ter rastlinstvo, prilagojeno poletni suši, npr. makijo in garigo."
+      },
+      {
+        "type": "classify",
+        "pts": 4,
+        "q": "Poveži državo in značilnost: Islandija, Norveška, Finska, Danska, Estonija.",
+        "answer": "Islandija - geotermalna energija in vulkanizem; Norveška - nafta, zemeljski plin in hidroenergija; Finska - gozdarstvo in jedrska energija; Danska - živinoreja in vetrna energija; Estonija - oljni skrilavec/premog in posledice rusifikacije. Povezava je smiselna, ker naravni viri in zgodovinski razvoj določajo gospodarske posebnosti držav."
+      },
+      {
+        "type": "explain",
+        "pts": 6,
+        "q": "Pojasni vzroke in posledice kislega dežja v Severni Evropi.",
+        "answer": "Kisli dež v Severni Evropi nastaja zaradi žveplovih in dušikovih spojin, ki jih vetrovi prinašajo tudi iz drugih delov Evrope, v gradivu predvsem iz Velike Britanije. Problem je hujši zaradi silikatne kamninske podlage z malo kalcija, zato se kisline slabše nevtralizirajo. Posledice so zakisana jezera in reke, umiranje rib ter poškodbe iglastih gozdov. Rešitve so zmanjševanje emisij, apnenje jezer in mednarodni dogovori."
+      },
+      {
+        "type": "map",
+        "pts": 5,
+        "q": "Na karti Zahodne Evrope označi: Ren, Temzo, Loaro, Severno morje in Rokavski preliv.",
+        "answer": "Na karti morajo biti pravilno označeni Ren, Temza, Loara, Severno morje in Rokavski preliv. Ren je pomembna prometna reka zahodne in srednje Evrope, Temza je povezana z Londonom, Loara in Sena sta pomembni francoski reki, Rokavski preliv pa loči Francijo od Velike Britanije.",
+        "img": "assets/images/zahodna_evropa_nema.png",
+        "solutionImg": "assets/images/zahodna_vodovje.png"
+      },
+      {
+        "type": "truefalse",
+        "pts": 5,
+        "q": "DA/NE: a) Baltski ščit je mladonagubano gorovje. b) Španija je prva po oljkah in oljčnem olju. c) Rotterdam je največje pristanišče v Evropi. d) Kaledonska gorstva so v Zahodni Evropi. e) Suez povezuje Sredozemsko in Črno morje.",
+        "answer": "a) NE - Baltski ščit je stara uravnava iz predkambrija, ne mladonagubano gorovje. b) DA - Španija je v gradivu navedena kot prva po pridelavi oljk in oljčnega olja. c) DA - Rotterdam je največje evropsko pristanišče. d) DA - kaledonska sredogorja so značilna za dele Zahodne Evrope. e) NE - Sueški prekop povezuje Sredozemsko in Rdeče morje, ne Črnega morja."
+      },
+      {
+        "type": "fill",
+        "pts": 5,
+        "q": "Dopolni besedilo o EU: 1951 je nastala ______, 1957 ______, 1992 pa je z Maastrichtsko pogodbo nastala ______.",
+        "answer": "1951 je nastala Evropska skupnost za premog in jeklo, 1957 Evropska gospodarska skupnost, 1992 pa je z Maastrichtsko pogodbo nastala Evropska unija. Razvoj kaže, da se je evropsko povezovanje začelo z gospodarstvom, nato pa se je razširilo še na politično, socialno, okoljsko in regionalno sodelovanje."
+      },
+      {
+        "type": "graph",
+        "pts": 4,
+        "q": "Ob grafu o starostni sestavi pojasni dve posledici staranja Evrope.",
+        "answer": "Staranje prebivalstva povzroča zmanjševanje deleža delovno aktivnih in povečanje deleža starejših. Posledice so pomanjkanje delovne sile, večji stroški pokojnin in zdravstva ter potreba po priseljevanju ali daljši delovni aktivnosti. Spremeni se tudi prostorsko načrtovanje, ker rastejo potrebe po zdravstveni oskrbi in prilagojeni infrastrukturi.",
+        "img": "assets/images/starostna_piramida_evrope.png",
+        "solutionImg": "assets/images/starostna_piramida_evrope.png"
+      },
+      {
+        "type": "explain",
+        "pts": 5,
+        "q": "Zakaj je Nizozemska poplavno ogrožena in kako se varuje?",
+        "answer": "Nizozemska je poplavno ogrožena, ker leži v delti Rena, Maasa in Šelde, velik del površja pa je zelo nizek ali celo pod morsko gladino. Ogrožajo jo plima, viharni valovi, rečne poplave in dvig morske gladine. Varuje se z nasipi, zapornicami, črpalkami, polderji in projektom Delta, ki zmanjšuje nevarnost katastrofalnih poplav."
+      },
+      {
+        "type": "short",
+        "pts": 5,
+        "q": "Opiši pomen nordijskega modela razvoja.",
+        "answer": "Nordijski model pomeni visoko gospodarsko razvitost, močne demokratične institucije, zaupanje v državo, nizko koruptivnost, enakomernejšo razdelitev bogastva in velika vlaganja v zdravstvo, šolstvo ter socialne službe. Ker prebivalci plačujejo visoke davke, lahko država zagotavlja socialno varnost, zato govorimo o državi blaginje."
+      },
+      {
+        "type": "explain",
+        "pts": 6,
+        "q": "Pojasni pomen Sredozemskega morja za Južno Evropo.",
+        "answer": "Sredozemsko morje pomembno vpliva na Južno Evropo, ker oblikuje podnebje, rastlinstvo, kmetijstvo in gospodarstvo. Omogoča turizem, ribištvo, gojenje morskih organizmov, pomorski promet, ladijski turizem in črpanje nafte ter plina iz morskega dna. Zaradi Sueškega prekopa je tudi del najkrajše pomorske poti med Evropo in Azijo."
+      },
+      {
+        "type": "defs",
+        "pts": 8,
+        "q": "Razloži pojme: TEN-T, makija, gejzir, Schengen, konurbacija, huerta, naturalizacija, primarna energija.",
+        "answer": "TEN-T je vseevropsko prometno omrežje. Makija je gosta grmovna degradacijska vegetacija v Sredozemlju. Gejzir je vroč vrelec, ki v presledkih brizga vodo in paro. Schengen je območje prostega gibanja brez notranjih mejnih kontrol. Konurbacija je zraščeno somestje več mest. Huerta je intenzivno namakano kmetijsko območje. Naturalizacija je pridobitev državljanstva. Primarna energija je energija iz naravnih virov pred pretvorbo."
+      }
+    ]
+  },
+  "C": {
+    "title": "Test C",
+    "questions": [
+      {
+        "type": "short",
+        "pts": 3,
+        "q": "Naštej tri stare države priseljevanja v Evropi po 2. svetovni vojni.",
+        "answer": "Stare države priseljevanja po 2. svetovni vojni so Nemčija, Francija, Velika Britanija, Belgija in Nizozemska. Potrebovale so delovno silo za obnovo, gradbeništvo in industrijo, zato so sprejemale delavce iz južne Evrope in nekdanjih kolonij."
+      },
+      {
+        "type": "compare",
+        "pts": 4,
+        "q": "Primerjaj sever in jug Italije.",
+        "answer": "Sever Italije je bogatejši in gospodarsko razvitejši, z močnejšo industrijo, storitvami, boljšo infrastrukturo in višjim življenjskim standardom. Jug Italije oziroma Mezzogiorno je revnejši, manj industrializiran, z večjo brezposelnostjo, depopulacijo in slabšimi razvojnimi možnostmi. Razlika je posledica neenakomerne industrializacije, zgodovinskega razvoja in manj ugodnih gospodarskih razmer na jugu."
+      },
+      {
+        "type": "classify",
+        "pts": 4,
+        "q": "Razvrsti oblike sredozemskega kmetijstva: ozimna žita, oljka, vinogradništvo, huerte, rastlinjaki, ovčereja, kulturne terase, agrumi.",
+        "answer": "Sušno poljedelstvo: ozimna žita, ker dozorijo pred poletno sušo. Trajne kulture: oljka, vinska trta, vinogradništvo in kulturne terase, ker prenesejo sušo in naklone. Namakalno/moderno kmetijstvo: huerte, rastlinjaki, agrumi, ker potrebujejo vodo in intenzivno pridelavo. Živinoreja: ovčereja, zlasti na bolj suhih in hribovitih območjih."
+      },
+      {
+        "type": "explain",
+        "pts": 5,
+        "q": "Pojasni, zakaj se je industrijska revolucija začela v Angliji.",
+        "answer": "Industrijska revolucija se je začela v Angliji, ker so se tam povezali kmetijska revolucija, sprostitev delovne sile, zaloge premoga in železove rude, dobra pristanišča, železnice ter kolonije. Kolonije so dajale surovine in tržišča, premog in železo sta omogočala stroje in težko industrijo, delovna sila pa se je iz podeželja preselila v mesta."
+      },
+      {
+        "type": "map",
+        "pts": 6,
+        "q": "Na karti Severne Evrope označi: Skandinavsko gorovje, Baltski ščit, Islandijo, Finsko pojezerje, Norveško in pribaltske države.",
+        "answer": "Na karti je treba pravilno prepoznati severnoevropski prostor: Skandinavsko gorovje na zahodu Skandinavskega polotoka, Baltski ščit na območju Švedske in Finske, Islandijo v severnem Atlantiku, Finsko pojezerje v Finski, Norveško ob zahodni obali Skandinavije ter pribaltske države ob vzhodni obali Baltskega morja.",
+        "img": "assets/images/severna_evropa_nema.png",
+        "solutionImg": "assets/images/podnebni_tipi_severna.png"
+      },
+      {
+        "type": "truefalse",
+        "pts": 5,
+        "q": "DA/NE: a) Fjell je ledeniško jezero. b) Polderji so pomembni za Nizozemsko. c) Brexit se je zgodil 2020. d) Sredozemski gozd lahko degradira v makijo in garigo. e) Irska je bila vedno država priseljevanja.",
+        "answer": "a) NE - fjell je zbrušeno planotasto površje nad gozdno mejo, ne jezero. b) DA - polderji so ključni za Nizozemsko. c) DA - brexit se je zgodil leta 2020. d) DA - sredozemski gozd se lahko degradira v makijo in garigo. e) NE - Irska je bila dolgo območje izseljevanja, šele pozneje se je zaradi gospodarskega razvoja povečalo priseljevanje."
+      },
+      {
+        "type": "fill",
+        "pts": 5,
+        "q": "Dopolni: Evropska populacijska os poteka približno ob ______ vzporedniku od ______ do ______.",
+        "answer": "Evropska populacijska os poteka približno ob 50. vzporedniku od Anglije do Ukrajine. Vključuje pomembne zgostitve in stare industrijske pokrajine, kot so Black Country, Porurje, Šlezija in Doneški bazen, zato povezuje gosto poselitev, industrijsko zgodovino in prometno-gospodarske tokove."
+      },
+      {
+        "type": "graph",
+        "pts": 4,
+        "q": "Ob grafu o pribaltskih državah pojasni, zakaj se število prebivalcev zmanjšuje.",
+        "answer": "Število prebivalcev pribaltskih držav se zmanjšuje zaradi izseljevanja po osamosvojitvi, odseljevanja rusko govorečega prebivalstva, težkega prehoda v tržno gospodarstvo, izseljevanja mladih po vstopu v EU in po finančni krizi 2008 ter nizkega naravnega prirasta. Zato sta zlasti Litva in Latvija med demografsko najbolj ogroženimi državami v Evropi.",
+        "img": "assets/images/prebivalstvo_pribaltske.png",
+        "solutionImg": "assets/images/prebivalstvo_pribaltske.png"
+      },
+      {
+        "type": "explain",
+        "pts": 5,
+        "q": "Razloži pomen kolonializma za Zahodno Evropo.",
+        "answer": "Kolonializem je Zahodni Evropi prinesel surovine za industrijo, tržišča za izdelke in gospodarsko moč, zato je pospešil industrializacijo Velike Britanije, Francije, Belgije in Nizozemske. Po razpadu imperijev so ostale jezikovne, kulturne in migracijske povezave, npr. Commonwealth in frankofonija, kar še danes vpliva na multikulturnost zahodnoevropskih družb."
+      },
+      {
+        "type": "short",
+        "pts": 5,
+        "q": "Kaj je Rail Baltica in zakaj je pomembna?",
+        "answer": "Rail Baltica je projekt hitre železniške povezave Estonije, Latvije in Litve s Poljsko ter širšim evropskim železniškim omrežjem. Pomembna je, ker zmanjšuje prometno izoliranost pribaltskih držav, krepi gospodarsko povezanost z EU in ima tudi geopolitični pomen, saj regijo tesneje povezuje z zahodno in srednjo Evropo."
+      },
+      {
+        "type": "explain",
+        "pts": 6,
+        "q": "Pojasni, zakaj je sredozemsko kmetijstvo prilagojeno poletni suši.",
+        "answer": "Sredozemsko kmetijstvo je prilagojeno poletni suši, ker je v sredozemskem podnebju poleti vroče in suho, največ padavin pa je v hladni polovici leta. Zato ozimna žita dozorijo pred najhujšo sušo, oljke in vinska trta imajo prilagoditve na pomanjkanje vode, na bolj strmih območjih se uporabljajo kulturne terase, na intenzivnih območjih pa namakanje, huerte in rastlinjaki."
+      },
+      {
+        "type": "defs",
+        "pts": 8,
+        "q": "Razloži pojme: fjord, Meseta, modra banana, polder, deindustrializacija, država blaginje, azil, evroobmočje.",
+        "answer": "Fjord je ledeniška dolina, ki jo je zalilo morje. Meseta je planota na Iberskem polotoku. Modra banana je osrednje gospodarsko-poselitveno območje Evrope. Polder je izsušeno zemljišče, obdano z nasipi. Deindustrializacija pomeni zmanjševanje pomena industrije. Država blaginje zagotavlja visoko socialno varnost. Azil je mednarodna zaščita. Evroobmočje je skupina držav, ki uporabljajo evro."
+      }
+    ]
+  },
+  "D": {
+    "title": "Test D",
+    "questions": [
+      {
+        "type": "short",
+        "pts": 3,
+        "q": "Navedi države Beneluksa in pojasni pojem Beneluks.",
+        "answer": "Beneluks sestavljajo Belgija, Nizozemska in Luksemburg. Pojem označuje politično-gospodarsko unijo teh treh držav. V geografiji je pomemben, ker gre za zelo gosto poseljeno, prometno močno povezano in gospodarsko razvito območje Zahodne Evrope."
+      },
+      {
+        "type": "compare",
+        "pts": 4,
+        "q": "Primerjaj modro banano in sončni pas.",
+        "answer": "Modra banana je osrednja evropska razvojna os z zelo gosto poselitvijo, velikimi mesti, prometom, storitvami in gospodarsko močjo. Sončni pas pa je sredozemski razvojni pas, kjer so pomembni ugodno podnebje, turizem, visoke tehnologije, univerzitetna središča in selitve prebivalstva ter dejavnosti proti obalam. Prva kaže staro evropsko gospodarsko jedro, druga pa novejši razvojni premik proti jugu."
+      },
+      {
+        "type": "classify",
+        "pts": 4,
+        "q": "Razvrsti vire elektrike po državah Severne Evrope: hidroenergija, jedrska energija, vetrna energija, zemeljski plin, premog.",
+        "answer": "Hidroenergija: Islandija, Norveška in Švedska, ker imajo ledenike, gorovja, velik strmec in veliko vode. Jedrska energija: Finska. Vetrna energija: Danska in Litva zaradi dobre prevetrenosti. Zemeljski plin: Latvija. Premog oziroma oljni skrilavec: Estonija. Razlike so povezane z naravnimi viri in energetsko politiko držav."
+      },
+      {
+        "type": "explain",
+        "pts": 5,
+        "q": "Pojasni razlike med EU, Schengnom in evroobmočjem.",
+        "answer": "EU je politično-ekonomska zveza 27 držav. Schengensko območje omogoča prosto gibanje brez rednih kontrol na notranjih mejah, vendar zahteva strožji nadzor zunanje meje. Evroobmočje je skupina držav, ki uporabljajo evro. Pojmi niso enaki, ker nekatere države EU nimajo evra ali niso v Schengnu, nekatere schengenske države pa niso članice EU."
+      },
+      {
+        "type": "map",
+        "pts": 6,
+        "q": "Na karti Južne Evrope označi: Meseto, Pireneje, Apenine, Etno/Sicilijo, Egejsko morje in Ciper.",
+        "answer": "Na karti morajo biti pravilno označeni Meseta na Iberskem polotoku, Pireneji med Španijo in Francijo, Apenini po dolžini Italije, Etna oziroma Sicilija južno od Italije, Egejsko morje med Grčijo in Malo Azijo ter Ciper v vzhodnem Sredozemlju.",
+        "img": "assets/images/juzna_evropa_nema.png",
+        "solutionImg": "assets/images/juzna_evropa_karta.png"
+      },
+      {
+        "type": "truefalse",
+        "pts": 5,
+        "q": "DA/NE: a) Zahodna Evropa ima večinoma oceansko podnebje. b) Sredozemsko morje ima hitro izmenjavo vode z Atlantikom. c) Finska je najbolj gozdnata država Evrope. d) Randstad je konurbacija. e) Sueški prekop povezuje Evropo in Ameriko po najkrajši poti.",
+        "answer": "a) DA - Zahodna Evropa ima večinoma oceansko podnebje. b) NE - Sredozemsko morje ima počasno izmenjavo vode z Atlantikom. c) DA - Finska je najbolj gozdnata država Evrope. d) DA - Randstad je konurbacija. e) NE - Sueški prekop povezuje Sredozemsko in Rdeče morje ter skrajša pot med Evropo in Azijo."
+      },
+      {
+        "type": "fill",
+        "pts": 5,
+        "q": "Dopolni: Južna Evropa ima mladonagubana gorstva zaradi stika ______ in ______ litosferske plošče; nastala so z ______ orogenezo.",
+        "answer": "Južna Evropa ima mladonagubana gorstva zaradi stika Afriške in Evrazijske litosferske plošče; nastala so z alpidsko orogenezo. Zaradi tega stika plošč so v Sredozemlju pogosti potresi in aktiven vulkanizem, na primer Etna, Stromboli, Vezuv in Santorin."
+      },
+      {
+        "type": "graph",
+        "pts": 4,
+        "q": "Ob karti/grafu gostote poselitve pojasni, zakaj so S, Z in J Evrope gosteje poseljeni od severa in vzhoda.",
+        "answer": "Srednja, Zahodna in Južna Evropa so gosteje poseljene zaradi ugodnejšega podnebja, nižin, zgodnje industrializacije, gostega prometnega omrežja, močnih mest in obalnih dejavnosti. Sever je redkeje poseljen zaradi hladnejšega podnebja in naravnih ovir, vzhod pa je ponekod redkeje poseljen zaradi večje oddaljenosti od atlantskega jedra, drugačnega gospodarskega razvoja in večjih razdalj med središči.",
+        "img": "assets/images/gostota_poselitve_evrope.png",
+        "solutionImg": "assets/images/gostota_poselitve_evrope.png"
+      },
+      {
+        "type": "explain",
+        "pts": 6,
+        "q": "Pojasni delitev Cipra in njeno povezavo z EU.",
+        "answer": "Ciper je razdeljen na mednarodno priznano Republiko Ciper na jugu in turški del na severu, ki ga priznava samo Turčija. Republika Ciper je članica EU od leta 2004, vendar pravni red EU na severnem delu otoka v praksi ne deluje v celoti. Delitev je posledica politično-etničnega konflikta med grško in turško skupnostjo ter je pomembna posebnost Južne Evrope."
+      },
+      {
+        "type": "short",
+        "pts": 5,
+        "q": "Opiši posledice deindustrializacije v Veliki Britaniji.",
+        "answer": "Deindustrializacija v Veliki Britaniji pomeni zmanjševanje pomena stare in težke industrije ter rast storitvenih, finančnih in visokotehnoloških dejavnosti. Posledice so zapiranje rudnikov in tovarn, upad zaposlenosti v industriji, preobrazba starih industrijskih pokrajin, socialne težave v nekaterih mestih in večja vloga Londona ter storitvenega sektorja."
+      },
+      {
+        "type": "explain",
+        "pts": 6,
+        "q": "Pojasni, kako naravni dejavniki vplivajo na kmetijstvo Zahodne Evrope.",
+        "answer": "Kmetijstvo Zahodne Evrope je močno odvisno od naravnih dejavnikov. Ravno ali rahlo valovito površje omogoča mehanizacijo, oceansko podnebje z veliko vlage in malo temperaturnimi ekstremi pa omogoča dolgo vegetacijsko dobo, travništvo in intenzivno živinorejo. V toplejših in bolj zavetnih delih je mogoče tudi vinogradništvo, medtem ko so hribovita območja manj primerna za intenzivno poljedelstvo."
+      },
+      {
+        "type": "defs",
+        "pts": 7,
+        "q": "Razloži pojme: litoralizacija, makija, zelen pas, migrantski saldo, gejzir, TEN-T, keltski tiger.",
+        "answer": "Litoralizacija je zgoščanje prebivalstva in gospodarstva ob obalah. Makija je gosta sredozemska grmovna vegetacija. Zeleni pas je nezazidljivo območje okoli mesta. Migracijski saldo je razlika med priseljenimi in odseljenimi. Gejzir je vroč vrelec. TEN-T je vseevropsko prometno omrežje. Keltski tiger označuje obdobje hitre gospodarske rasti Irske."
+      }
+    ]
+  }
+};
+let TESTS = EMBEDDED_TESTS;
+let active = 'A';
+async function loadTests(){
+  try{
+    if(location.protocol !== 'file:'){
+      const res = await fetch(window.TESTS_URL);
+      TESTS = await res.json();
+    } else { TESTS = EMBEDDED_TESTS; }
+  } catch(e){ TESTS = EMBEDDED_TESTS; }
+  renderTest('A');
+}
+function esc(s){ return String(s||'').replace(/[&<>]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[ch])); }
+function renderQuestion(q,i){
+  const img = q.img ? `<figure class="test-img"><img src="${q.img}" alt="Gradivo za nalogo"><figcaption>Gradivo za nalogo</figcaption></figure>` : '';
+  const simg = q.solutionImg ? `<figure class="test-img solution-img"><img src="${q.solutionImg}" alt="Rešitev na karti"><figcaption>Rešitev / označena karta</figcaption></figure>` : '';
+  return `<div class="test-q"><h3>${i+1}. (${q.pts} t)</h3><p>${esc(q.q)}</p>${img}<textarea placeholder="Tvoj odgovor..."></textarea><details class="solution"><summary>Rešitev / kriterij</summary>${simg}<p>${esc(q.answer)}</p></details></div>`;
+}
+function renderTest(code){
+  active=code;
+  document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('active',b.dataset.test===code));
+  const t=TESTS[code];
+  document.getElementById('pdfButtons').innerHTML=`<a class="btn" href="assets/pdf/test_${code}.pdf" download>Prenesi PDF</a><a class="btn secondary" href="assets/pdf/test_${code}_resitve.pdf" download>Prenesi rešitve PDF</a><button class="btn ghost" id="showAllSolutions">Pokaži/skrij rešitve na strani</button>`;
+  document.getElementById('testContainer').innerHTML=`<h2>${t.title}</h2><p>Interaktivna različica je vsebinsko usklajena s PDF-testom. Pri nalogah s karto ali klimogramom je gradivo prikazano neposredno ob vprašanju.</p>${t.questions.map(renderQuestion).join('')}`;
+  document.getElementById('showAllSolutions').addEventListener('click',()=>document.querySelectorAll('.solution').forEach(d=>d.open=!d.open));
+}
+document.querySelectorAll('.tabbtn').forEach(b=>b.addEventListener('click',()=>renderTest(b.dataset.test)));
+loadTests();
