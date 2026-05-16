@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "index.html",
+    "ucenje/evropa.html",
+    "ucenje/severna-evropa.html",
+    "ucenje/juzna-evropa.html",
+    "ucenje/zahodna-evropa.html",
+    "definicije.html",
+    "karte.html",
+    "ponavljanje/top-vprasanja.html",
+    "ponavljanje/flashcards.html",
+    "testi.html"
+  ],
+  "pdfs": [
+    "assets/pdf/test_A.pdf",
+    "assets/pdf/test_B.pdf",
+    "assets/pdf/test_C.pdf",
+    "assets/pdf/test_D.pdf",
+    "assets/pdf/test_A_resitve.pdf",
+    "assets/pdf/test_B_resitve.pdf",
+    "assets/pdf/test_C_resitve.pdf",
+    "assets/pdf/test_D_resitve.pdf"
+  ]
+}
